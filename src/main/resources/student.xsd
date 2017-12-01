@@ -1,0 +1,46 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://www.enicarthage.com/xml/school"
+           targetNamespace="https://www.enicarthage.com/xml/school" elementFormDefault="qualified">
+
+    <xs:element name="StudentDetailsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="StudentDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Student" type="tns:Student"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="StudentDetailsRequestname">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="StudentDetailsResponsename">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Student" type="tns:Student"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Student">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="niveau" type="xs:int"/>
+            <xs:element name="classe" type="xs:string"/>
+            <xs:element name="moy" type="xs:double"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
